@@ -3,6 +3,11 @@ let mong = require('mongoose');
 let ex = require('express');
 let app = ex();
 
+global.config = require('./config/config');
+
+let jwt    = require('jsonwebtoken');
+let jwt_secret = "shhh";
+let verifyToken = require('./middleware/verifyToken');
 
 
 //route
@@ -20,8 +25,8 @@ app.use('/',function(req,res,next){
     next();
 });
 
-// let login = require('./login/loginRoute.js');
-// app.use('/api',login);
+let login = require('./login/loginRoute.js');
+app.use('/api',login);
 
 // let petugasRoute = require('./petugas/petugasRoute.js');
 // app.use('/api',petugasRoute);
