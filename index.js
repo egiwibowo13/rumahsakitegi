@@ -9,8 +9,7 @@ let jwt    = require('jsonwebtoken');
 let jwt_secret = "shhh";
 let verifyToken = require('./middleware/verifyToken');
 
-let login = require('./login/loginRoute.js');
-app.use('/api',login);
+
 //route
 app.use(bodyParser.json());
 // app.use(function(req,res,next){
