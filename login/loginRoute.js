@@ -1,6 +1,6 @@
 let expres = require('express');
 let route = expres.Router();
-global.config = require('../config/config');
+let config = require('../config/config');
 let verifyToken = require('../middleware/verifyToken');
 let User = require('./loginModel');
 
