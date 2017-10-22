@@ -39,7 +39,7 @@ let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
 app.use('/api',rumahsakitRoute);
 
 let perawatanRoute = require('./perawatan/perawatanRoute.js');
-app.use('/api',verifyToken,perawatanRoute);
+app.use('/api',perawatanRoute);
 
 let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
 app.use('/api',pendaftaranRoute);
