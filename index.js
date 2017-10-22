@@ -25,8 +25,8 @@ app.use('/',function(req,res,next){
     next();
 });
 
-let login = require('./login/loginRoute.js');
-app.use('/api',login);
+// let login = require('./login/loginRoute.js');
+// app.use('/api',login);
 
 // let petugasRoute = require('./petugas/petugasRoute.js');
 // app.use('/api',petugasRoute);
