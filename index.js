@@ -3,11 +3,7 @@ let mong = require('mongoose');
 let ex = require('express');
 let app = ex();
 
-global.config = require('./config/config');
 
-let jwt    = require('jsonwebtoken');
-let jwt_secret = "shhh";
-let verifyToken = require('./middleware/verifyToken');
 //route
 app.use(bodyParser.json());
 // app.use(function(req,res,next){
