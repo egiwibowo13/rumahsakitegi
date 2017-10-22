@@ -3,7 +3,14 @@ let mong = require('mongoose');
 let ex = require('express');
 let app = ex();
 
+let config = require('./config/config');
 
+let jwt    = require('jsonwebtoken');
+let jwt_secret = "shhh";
+let verifyToken = require('./middleware/verifyToken');
+
+let login = require('./login/loginRoute.js');
+app.use('/api',login);
 //route
 app.use(bodyParser.json());
 // app.use(function(req,res,next){
@@ -32,7 +39,7 @@ let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
 app.use('/api',rumahsakitRoute);
 
 let perawatanRoute = require('./perawatan/perawatanRoute.js');
-app.use('/api',perawatanRoute);
+app.use('/api',verifyToken,perawatanRoute);
 
 let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
 app.use('/api',pendaftaranRoute);
