@@ -3,10 +3,7 @@ let mong = require('mongoose');
 let ex = require('express');
 let app = ex();
 
-let config = require('./config/config');
 
-let jwt    = require('jsonwebtoken');
-let jwt_secret = "shhh";
 let verifyToken = require('./middleware/verifyToken');
 
 
