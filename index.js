@@ -42,8 +42,8 @@ app.use('/',function(req,res,next){
 // let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
 // app.use('/api',perawatanDiagnosaRoute);
 
-let dokterRoute = require('./dokter/dokterRoute.js');
-app.use('/api',dokterRoute);
+// let dokterRoute = require('./dokter/dokterRoute.js');
+// app.use('/api',dokterRoute);
 
 // let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
 // app.use('/api',pembayaranRoute);
