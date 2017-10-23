@@ -30,17 +30,17 @@ app.use('/',function(req,res,next){
 // let provinsiRoute = require('./provinsi/provinsiRoute.js');
 // app.use('/api',provinsiRoute);
 
-let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
-app.use('/api',rumahsakitRoute);
+// let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
+// app.use('/api',rumahsakitRoute);
 
-let perawatanRoute = require('./perawatan/perawatanRoute.js');
-app.use('/api',perawatanRoute);
+// let perawatanRoute = require('./perawatan/perawatanRoute.js');
+// app.use('/api',perawatanRoute);
 
-let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
-app.use('/api',pendaftaranRoute);
+// let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
+// app.use('/api',pendaftaranRoute);
 
-let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
-app.use('/api',perawatanDiagnosaRoute);
+// let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
+// app.use('/api',perawatanDiagnosaRoute);
 
 let dokterRoute = require('./dokter/dokterRoute.js');
 app.use('/api',dokterRoute);
