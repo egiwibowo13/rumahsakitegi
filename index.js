@@ -31,62 +31,62 @@ app.use('/',function(req,res,next){
 let login = require('./login/loginRoute.js');
 app.use('/api',login);
 
-// let petugasRoute = require('./petugas/petugasRoute.js');
-// app.use('/api',petugasRoute);
+let petugasRoute = require('./petugas/petugasRoute.js');
+app.use('/api',verifyToken,petugasRoute);
 
-// let provinsiRoute = require('./provinsi/provinsiRoute.js');
-// app.use('/api',provinsiRoute);
+let provinsiRoute = require('./provinsi/provinsiRoute.js');
+app.use('/api',verifyToken,provinsiRoute);
 
-// let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
-// app.use('/api',rumahsakitRoute);
+let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
+app.use('/api',verifyToken,rumahsakitRoute);
 
-// let perawatanRoute = require('./perawatan/perawatanRoute.js');
-// app.use('/api',perawatanRoute);
+let perawatanRoute = require('./perawatan/perawatanRoute.js');
+app.use('/api',verifyToken,perawatanRoute);
 
-// let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
-// app.use('/api',pendaftaranRoute);
+let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
+app.use('/api',verifyToken,pendaftaranRoute);
 
 let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
 app.use('/api',verifyToken,perawatanDiagnosaRoute);
 
-// let dokterRoute = require('./dokter/dokterRoute.js');
-// app.use('/api',dokterRoute);
+let dokterRoute = require('./dokter/dokterRoute.js');
+app.use('/api',verifyToken,dokterRoute);
 
-// let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
-// app.use('/api',pembayaranRoute);
+let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
+app.use('/api',verifyToken,pembayaranRoute);
 
-// let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
-// app.use('/api',pembayaranDetailRoute);
+let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
+app.use('/api',verifyToken,pembayaranDetailRoute);
 
-// let perawatRoute = require('./perawat/perawatRoute.js');
-// app.use('/api',perawatRoute);
+let perawatRoute = require('./perawat/perawatRoute.js');
+app.use('/api',verifyToken,perawatRoute);
 
-// let diagnosaRoute = require('./diagnosa/diagnosaRoute.js');
-// app.use('/api',diagnosaRoute);
+let diagnosaRoute = require('./diagnosa/diagnosaRoute.js');
+app.use('/api',verifyToken,diagnosaRoute);
 
-// let diagnosadetailRoute = require('./diagnosadetail/diagnosaDetailRoute.js');
-// app.use('/api',diagnosadetailRoute);
+let diagnosadetailRoute = require('./diagnosadetail/diagnosaDetailRoute.js');
+app.use('/api',verifyToken,diagnosadetailRoute);
 
-// let jenisObatRoute = require('./jenisObat/jenisObatRoute.js');
-// app.use('/api',jenisObatRoute);
+let jenisObatRoute = require('./jenisObat/jenisObatRoute.js');
+app.use('/api',verifyToken,jenisObatRoute);
 
-// let kategoriObatRoute = require('./kategoriObat/kategoriObatRoute.js');
-// app.use('/api',kategoriObatRoute);
+let kategoriObatRoute = require('./kategoriObat/kategoriObatRoute.js');
+app.use('/api',verifyToken,kategoriObatRoute);
 
-// let pasienRoute = require('./pasien/pasienRoute.js');
-// app.use('/api',pasienRoute);
+let pasienRoute = require('./pasien/pasienRoute.js');
+app.use('/api',verifyToken,pasienRoute);
 
-// let ruangInapRoute = require('./ruanginap/ruangInapRoute.js');
-// app.use('/api',ruangInapRoute);
+let ruangInapRoute = require('./ruanginap/ruangInapRoute.js');
+app.use('/api',verifyToken,ruangInapRoute);
 
-// let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute.js');
-// app.use('/api',satuanHargaDokterRoute);
+let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute.js');
+app.use('/api',verifyToken,satuanHargaDokterRoute);
 
-// let userPasienRoute = require('./userPasien/userPasienRoute.js');
-// app.use('/api',userPasienRoute);
+let userPasienRoute = require('./userPasien/userPasienRoute.js');
+app.use('/api',verifyToken,userPasienRoute);
 
-// let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
-// app.use('/api',variasiObatRoute);
+let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
+app.use('/api',verifyToken,variasiObatRoute);
 
 
 
