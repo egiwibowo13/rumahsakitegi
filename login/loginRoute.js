@@ -30,7 +30,7 @@ route.post('/login/authenticate', function(req, res){
 
 
 route.get('/login',function(req,res){
-    loginController.getPasien(function(err,respon){
+    loginController.getLogin(function(err,respon){
         if(err){
             throw err;
         }
@@ -39,7 +39,7 @@ route.get('/login',function(req,res){
 });
 route.get('/login/:_id',function(req,res){
 	let id = req.params._id;
-    loginController.getPasienById(id,function(err,respon){
+    loginController.getLoginById(id,function(err,respon){
         if(err){
             throw err;
         }
@@ -48,7 +48,7 @@ route.get('/login/:_id',function(req,res){
 });
 route.post('/login',function(req,res){
     let ptgs = req.body;
-    loginController.createPasien(ptgs,function(err,respon){
+    loginController.createLogin(ptgs,function(err,respon){
         if(err){
             throw err;
         }
@@ -56,7 +56,7 @@ route.post('/login',function(req,res){
     });
 });
 route.delete('/login/:_id',function(req,res){
-    loginController.removePasien(req.params._id,function(err,respon){
+    loginController.removeLogin(req.params._id,function(err,respon){
         if(err){
             throw err;
         }
@@ -65,7 +65,7 @@ route.delete('/login/:_id',function(req,res){
 });
 route.put('/login/:_id',function(req,res){
     let ptgs = req.body;
-    loginController.updatePasien(req.params._id,ptgs,function(err,respon){
+    loginController.updateLogin(req.params._id,ptgs,function(err,respon){
         if(err){
             throw err;
         }
