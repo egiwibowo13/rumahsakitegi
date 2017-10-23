@@ -47,7 +47,7 @@ app.use('/api',login);
 // app.use('/api',pendaftaranRoute);
 
 let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
-app.use('/api',perawatanDiagnosaRoute);
+app.use('/api',verifyToken,perawatanDiagnosaRoute);
 
 // let dokterRoute = require('./dokter/dokterRoute.js');
 // app.use('/api',dokterRoute);
